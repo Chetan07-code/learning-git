@@ -1,0 +1,297 @@
+
+-----------Project Flow---------
+
+
+
+Myself Chetan Wankhede I have over 5+ years of IT experience, out of which  4 years in AWS data Enginnering &  Big Data technologies including Hadoop, Spark,Hive,Scala
+
+
+0
+onjob learning
+hive -- 
+hdfs
+
+
+
+========================================Chetan Project Flow==========================================================================================
+ 
+ 
+
+---join,filter,aggregations,window function
+
+ Project Introduction  :  Performance Livestock Analytical Platform (PLAP) 
+ 
+Performance Livestock Analytical Platform (PLAP)  is a data processing pipeline designed to handle large-scale livestock data efficiently. The project leverages AWS services like S3, Glue, Lambda, EMR, and Athena, along with PySpark, to transform and analyze data for business insights. The platform ensures data integrity, transformation, and optimization, supporting data analysts and scientists in making informed decisions.  
+
+---
+
+ Project Flow  
+
+ Data Processing Layers:  
+
+1. Raw Zone/Layer (L1) – Data Ingestion  
+   - Source: MySQL  
+   - The Data Ingestion team loads data into an S3 bucket while performing basic data sanitization and null validation to maintain data quality.  
+   - Data is stored in a structured directory within the S3 bucket.  
+
+2. Curated Zone/Layer (L2) – Data Processing  
+   - The Data Engineering Team processes the data using PySpark.  
+   - The transformed data is stored in a target S3 bucket for further analysis.  
+   - On-Prem Hive queries were migrated to PySpark jobs on AWS EMR.  
+   - Athena queries were optimized using partitioning strategies to enhance performance.  
+   - Conducted Liquid Risk Analysis to assess the financial impact of asset liquidity.  
+
+3. Consumption Zone (L3) – Data Utilization  
+   - Data analysts and scientists utilize the curated data for business intelligence.  
+   - Data is stored in Parquet format, making it efficient for querying and reporting.  
+   - Insights are presented through dashboards for decision-making.  
+
+ Flow Chart Representation:  
+
+```plaintext
++------------------+      +------------------+      +----------------------+
+|  L1: Raw Zone   | ---> |  L2: Curated Zone | ---> |  L3: Consumption Zone |
++------------------+      +------------------+      +----------------------+
+     (MySQL)                 (Transformations)            (Dashboards)
+       |                         |  
+       V                         V  
+  Data Ingestion        Data Processing (PySpark, Glue)  
+  (S3 Storage)         Optimized Queries (Athena)  
+                        Liquid Risk Analysis  
+```
+standardizing
+timestamp
+versionof
+
+---
+
+--- Roles & Responsibilities  
+
+ Primary Responsibilities:  
+- Developed ETL pipelines using PySpark on AWS EMR for large-scale data processing.  
+- Implemented data transformations (filtering, joins, aggregations, window functions) based on business logic.  
+- Optimized Athena queries by improving partitioning strategies for better performance.  
+- Conducted Liquid Risk Analysis to support financial planning and risk management.  
+- Performed data validation and quality checks to ensure accuracy and consistency.  		
+- Managed source code versioning using GitHub, following best practices for CI/CD.  
+- Optimized PySpark jobs for performance tuning and cost efficiency.  
+- Ensured data security compliance (IAM policies, encryption, access controls).  
+- Set up AWS CloudWatch monitoring to track job performance and troubleshoot errors.  
+- Collaborated with business analysts, data scientists, and stakeholders for requirement gathering and implementation.  
+
+ Additional Contributions:  
+- Participated in team discussions to analyze and implement changes in PySpark code.  
+- Worked on performance optimization using techniques like partitioning, caching, and cluster tuning.  
+- Migrated on-prem Hive queries to PySpark jobs in AWS EMR & Databricks.  
+- Developed AWS Lambda functions to automate workflows and integrate S3, EMR, and Athena.  
+
+---
+
+-----------------------------------------------------------------------------------------------------
+  
+
+---
+
+ Roles & Responsibilities:  
+- Designed and developed ETL data pipelines using PySpark on AWS EMR to process large-scale pharma datasets related to clinical trials, drug manufacturing, and supply chain.  
+- Optimized Athena queries and SQL scripts to enhance data retrieval performance and reduce query costs.  
+- Developed AWS Lambda functions to automate data ingestion, transformation, and processing workflows, ensuring seamless integration with S3, Athena, and EMR.  
+- Implemented data modeling and schema design for structured and semi-structured data stored in Amazon S3, ensuring efficient querying and storage optimization.  
+- Managed source code versioning using GitHub, following best practices for branch management, pull requests, and CI/CD workflows.  
+- Performed data validation and quality checks to ensure accuracy and consistency in pharmaceutical data reporting.  
+- Optimized PySpark jobs for performance tuning, memory management, and cost-effectiveness on AWS EMR.  
+- Implemented data security measures, including IAM policies, encryption (S3 SSE-KMS), and access control to comply with pharma regulatory standards (FDA, GMP, etc.).  
+- Set up AWS CloudWatch monitoring and logging mechanisms to track job performance, error handling, and pipeline reliability.  
+- Collaborated with cross-functional teams, including data analysts, business stakeholders, and cloud architects, to understand requirements and deliver scalable data solutions.  
+-Unit testing ,
+
+--- 
+  
+  if any df is used multiple times means multiple actions 
+  
+  will use persit with 
+	memeory_and_disc
+	memeory_and_disc_seriali
+	memeory_and_disc_desrialisario
+	
+	
+   will have to increase excutor memory 
+  
+   
+   will increate driver memeory 
+   write to disc 
+   
+   based on pattern of jobs 
+	complex jobs 
+		10 nodes with  r6d.8xlarge ec2 uses 
+   
+      
+  ---------------
+  
+  In our project the data passes through 3 zones RAW , Curated , Consumption
+  
+ RAW is the Data Ingestion Layer
+ 
+Data Ingestion Team loads data from multiple sources into Hadoop distributed file system by performing basic data sanitization and validations.   example ;- NULL VALIDATION put the data to s3
+
+Cuarted  IS the Data processing/transformation  layer -i have worked here
+
+-Data processing layer is a transformation layer where we data team picks the data  from S3 and do some transformations as per the bussiness logics and requirements. and write the data into the target s3 bucket 
+
+L3 IS the data Reporting Layer  ;-[DATA FORMAT ===PARQUET]]]
+
+In data reporting layer, data analyst and scientists picks the target data from data processing layer and perform some bussiness analysis and use it for reporting purpose.
+  -----------------------
+  
+  I'm Chandra sekhar . I have over three  plus years of experienc
+               as a Data Engineer and ETL application developer. I specialize in designing and managing 
+               large-scale data infrastructure using technologies such as pyspark , MYSQL, Python and AWS
+               components 
+               like  EC2, S3, Glue and Athena. 
+              i  worked on the Toyota manufacturing north America (TMNA), where we processed 
+
+              data in 3layers. raw , curated and consudfcsmption layer 
+             raw layer is the input data layer where our data inject team load the data from sql server)
+              in to s3 bucket and performing sanitization and null validations to ensure quantity.
+
+               in curated layer ,where we mount the s3 bucket in to our env using the glue jobs(glue clawers and data catalogs)
+              and perform some standizations and we apply req transformation and actions and as per the mapping  documents 
+              provided by business team . 
+
+               additionally , we created athena tables on s3 paths using AWS Glue crawler for daily data validation . after
+                  transformations , the data is stored to the s3 bucket.
+ 
+                  in final layer where our consumption team access the data and perform some insights to the data and sent to end users.
+-------------------------------------------------------------------------------
+i am part of data processing team.My Resposibilies are implementing pysaprk code based on tranformation mapping document provided by 
+businees analyst.
+2.i didnot get chance to work on data injestion, we have expertised level data team they usaually load the data from diff source to s3.
+3.participated in team discussions on analysing the problem in detail to understand the key points needed in implementing the changed
+ required for the pyspark code.
+4.optimising the spark jobs for using optimisations like partitions,cached and cluster configuration.
+5.after tansformation tables are stored back to s3 bucket.
+--------------------------------------------------------------------------------------------------------------------------------
+My roles and responsibilities are:
+------------------------------------------
+>> Involved in Understanding the HealthCare Data Needs And Detremine How data should be Collected, Processed and Stored.
+
+>> Joined team discussions to analyze problems and identify key points for making changes to PySpark jobs.
+
+>> Built and managed data pipelines using PySpark jobs to process and transform data efficiently 
+and Implemented data security measures and ensured compliance with healthcare regulations and data protection
+ standards, such as HIPAA.
+ 
+>> Optimizing spark jobs for using Spark optimizations like partitioning, caching, and cluster configurations(resources).
+	
+>>we perform SQL queries to combine the Health Care demographic data and medical records to filter and cleanining
+ the data as needed.
+ 
+>> Worked on fixing Production bugs and learnt about various issues and their resolutions. 
+>> Optimizing Spark SQL queries that helped in saving Cost to the project.
+
+
+------project introduction-----
+
+For the Performance Livestock Analytical Platform (PLAP) project, the Data Processing Layer (L2) can be designed using the provided tech stack (PySpark, Athena, SQL, IntelliJ IDE, GitHub, Amazon S3, AWS Lambda, AWS EMR). Below is a detailed explanation of how the data processing layer can be implemented:
+
+---
+
+ Data Processing Layer (L2) for PLAP
+
+The Data Processing Layer is responsible for transforming raw data ingested from the Data Ingestion Layer (L1) into a structured and meaningful format. This layer applies business logic, performs data transformations, and prepares the data for storage in the target S3 bucket for further analysis and reporting.
+
+---
+
+ Tech Stack for Data Processing Layer
+1. PySpark: For distributed data processing and transformations.
+2. AWS EMR (Elastic MapReduce): To run PySpark jobs on a managed Hadoop cluster.
+3. Amazon S3: For storing raw and processed data.
+4. Athena: For querying processed data directly from S3 using SQL.
+5. AWS Lambda: For orchestrating and automating data processing workflows.
+6. SQL: For querying and analyzing data.
+7. IntelliJ IDE: For developing and debugging PySpark and SQL scripts.
+8. GitHub: For version control and collaboration.
+
+---
+
+ Steps in the Data Processing Layer
+
+ 1. Data Ingestion from L1
+- Raw data is ingested into Amazon S3 from the Data Ingestion Layer (L1).
+- Data is stored in a raw format (e.g., CSV, JSON, or Avro) in an S3 bucket (e.g., `s3://plap-raw-data/`).
+
+ 2. Data Transformation with PySpark
+- PySpark jobs are used to read raw data from S3, apply transformations, and write the processed data back to S3.
+- Transformations include:
+  - Data Cleaning: Handling missing values, removing duplicates, and standardizing formats.
+  - Data Enrichment: Adding derived fields (e.g., calculating livestock growth rates).
+  - Data Aggregation: Summarizing data (e.g., average weight gain per livestock category).
+  - Data Partitioning: Partitioning data by relevant fields (e.g., date, region) for efficient querying.
+
+```python
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, when
+
+ Initialize Spark Session
+spark = SparkSession.builder \
+    .appName("PLAP Data Processing") \
+    .getOrCreate()
+
+ Read raw data from S3
+raw_data = spark.read.format("csv").option("header", "true").load("s3://plap-raw-data/")
+
+ Perform transformations
+cleaned_data = raw_data.filter(col("weight").isNotNull())   Remove rows with NULL weight
+enriched_data = cleaned_data.withColumn("growth_rate", col("current_weight") - col("initial_weight"))
+partitioned_data = enriched_data.repartition("region")   Partition by region
+
+ Write processed data to S3 in Parquet format
+partitioned_data.write.mode("overwrite").parquet("s3://plap-processed-data/")
+```
+
+ 3. Orchestration with AWS Lambda
+- AWS Lambda functions are used to trigger PySpark jobs on AWS EMR when new data is ingested into S3.
+- Lambda can also handle error handling, retries, and notifications.
+
+ 4. Querying Processed Data with Athena
+- Processed data stored in S3 (in Parquet format) is queried using Amazon Athena.
+- Athena allows analysts to run SQL queries directly on the data in S3 without needing to load it into a database.
+
+```sql
+-- Example Athena Query
+SELECT region, AVG(growth_rate) AS avg_growth_rate
+FROM plap_processed_data
+GROUP BY region;
+```
+
+ 5. Version Control and Collaboration with GitHub
+- PySpark scripts, SQL queries, and Lambda functions are version-controlled using GitHub.
+- Team members collaborate on code development and review changes through pull requests.
+
+ 6. Development and Debugging with IntelliJ IDE
+- PySpark and SQL scripts are developed and debugged using IntelliJ IDE with PySpark and SQL plugins.
+- IntelliJ IDE provides a seamless development experience with features like code completion, debugging, and integration with GitHub.
+
+---
+
+ Workflow of the Data Processing Layer
+1. Trigger: New data is ingested into the raw S3 bucket (`s3://plap-raw-data/`).
+2. Lambda Function: A Lambda function is triggered to start the PySpark job on AWS EMR.
+3. PySpark Job: The PySpark job reads raw data, applies transformations, and writes processed data to the target S3 bucket (`s3://plap-processed-data/`).
+4. Athena Query: Analysts query the processed data using Athena for reporting and analysis.
+5. Version Control: All code changes are pushed to GitHub for collaboration and version control.
+
+---
+
+ Key Features of the Data Processing Layer
+- Scalability: AWS EMR and PySpark enable distributed processing of large datasets.
+- Cost-Effectiveness: Data is stored in S3, and Athena allows querying without the need for a dedicated database.
+- Automation: AWS Lambda automates the triggering of data processing workflows.
+- Efficiency: Partitioning and Parquet format optimize query performance and reduce costs.
+
+---
+
+This design ensures a robust and scalable data processing layer for the Performance Livestock Analytical Platform (PLAP). Let me know if you need further assistance!
+
+----------
+Sonar Cube-tools to check code/build issues
